@@ -1,28 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/userProfile"
-        android:layout_width="160dp"
-        android:layout_height="34dp"
+        android:id="@+id/cl_userProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.caverock.androidsvg.SVGImageView
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_profile"
             android:layout_width="34dp"
-            android:layout_height="0dp"
+            android:layout_height="34dp"
+            android:src="@drawable/profile_avatar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:svg="profile_avatar.svg" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:text="@string/profile_name"
+            android:textColor="@color/ebony_clay"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/noto_sans"
+            app:layout_constraintBottom_toTopOf="@id/ll_profileDetails"
+            app:layout_constraintEnd_toEndOf="@id/ll_profileDetails"
+            app:layout_constraintStart_toStartOf="@id/ll_profileDetails"
+            app:layout_constraintTop_toTopOf="@id/img_profile" />
+
+        <LinearLayout
+            android:id="@+id/ll_profileDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/img_profile"
+            app:layout_constraintStart_toEndOf="@id/img_profile"
+            app:layout_constraintTop_toBottomOf="@id/tv_profileName">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_165cm"
+                android:textColor="@color/bali_hai"
+                android:textSize="12sp"
+                app:fontFamily="@font/roboto"
+                tools:ignore="SmallSp" />
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ellipse_936" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_53kg"
+                android:textColor="@color/bali_hai"
+                android:textSize="12sp"
+                app:fontFamily="@font/roboto"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_expertIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_profileName"
+            app:layout_constraintStart_toEndOf="@+id/tv_profileName"
+            app:layout_constraintTop_toTopOf="@id/tv_profileName"
+            app:srcCompat="@drawable/expert_icon" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/_1"
+            android:textColor="@color/bali_hai"
+            android:textSize="10sp"
+            app:fontFamily="@font/noto_sans"
+            app:layout_constraintBottom_toBottomOf="@id/img_expertIcon"
+            app:layout_constraintStart_toEndOf="@id/img_expertIcon"
+            app:layout_constraintTop_toTopOf="@id/img_expertIcon"
+            tools:ignore="SmallSp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/noto_sans"
+        android:text="@string/button_text"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/caribbean_green"
+        app:layout_constraintBottom_toBottomOf="@id/cl_userProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cl_userProfile" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/postTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/noto_sans"
+        android:text="@string/post_title"
+        android:textColor="@color/ebony_clay"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_userProfile" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPostBody"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/tv_post_body"
+        android:textColor="@color/oxford_blue"
+        android:textSize="12sp"
+        app:fontFamily="@font/noto_sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/postTitle" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/tags_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:chipSpacingVertical="-8dp"
+        app:layout_constraintEnd_toEndOf="@id/tvPostBody"
+        app:layout_constraintStart_toStartOf="@id/tvPostBody"
+        app:layout_constraintTop_toBottomOf="@id/tvPostBody">
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/_2023"
+            android:textColor="@color/waikawa_gray"
+            android:textSize="12sp"
+            app:chipBackgroundColor="@color/athens_gray"
+            app:chipCornerRadius="500dp"
+            app:chipStrokeColor="@color/mischka" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/todayismonday"
+            android:textColor="@color/waikawa_gray"
+            android:textSize="12sp"
+            app:chipBackgroundColor="@color/athens_gray"
+            app:chipCornerRadius="500dp"
+            app:chipStrokeColor="@color/mischka" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/top"
+            android:textColor="@color/waikawa_gray"
+            android:textSize="12sp"
+            app:chipBackgroundColor="@color/athens_gray"
+            app:chipCornerRadius="500dp"
+            app:chipStrokeColor="@color/mischka" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/pops"
+            android:textColor="@color/waikawa_gray"
+            android:textSize="12sp"
+            app:chipBackgroundColor="@color/athens_gray"
+            app:chipCornerRadius="500dp"
+            app:chipStrokeColor="@color/mischka" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/wow"
+            android:textColor="@color/waikawa_gray"
+            android:textSize="12sp"
+            app:chipBackgroundColor="@color/athens_gray"
+            app:chipCornerRadius="500dp"
+            app:chipStrokeColor="@color/mischka" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/row"
+            android:textColor="@color/waikawa_gray"
+            android:textSize="12sp"
+            app:chipBackgroundColor="@color/athens_gray"
+            app:chipCornerRadius="500dp"
+            app:chipStrokeColor="@color/mischka" />
+
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.opensooq.pluto.PlutoView
+        android:layout_width="0dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="16dp"
+        app:indicator_visibility="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tags_group" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

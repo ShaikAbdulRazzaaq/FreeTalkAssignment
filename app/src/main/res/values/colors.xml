@@ -3,5 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="cadet_blue">#AFB9CA</color>
+    <color name="ebony_clay">#1D232B</color>
+    <color name="bali_hai">#919EB6</color>
+    <color name="caribbean_green">#01B99F</color>
+    <color name="oxford_blue">#313B49</color>
+    <color name="mischka">#CED3DE</color>
+    <color name="athens_gray">#F7F8FA</color>
+    <color name="waikawa_gray">#5A6B87</color>
 
 </resources>
