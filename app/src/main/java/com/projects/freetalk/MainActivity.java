@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private void setUpRecyclerView() {
         activityMainBinding.rvPostList.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         activityMainBinding.rvPostList.setHasFixedSize(true);
+        activityMainBinding.rvPostList.setNestedScrollingEnabled(true);
         activityMainBinding.rvPostList.setAdapter(postItemAdapter);
     }
 }
