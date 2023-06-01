@@ -1,4 +1,4 @@
-package com.projects.freetalk;
+package com.projects.freetalk.ui.adapters;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;

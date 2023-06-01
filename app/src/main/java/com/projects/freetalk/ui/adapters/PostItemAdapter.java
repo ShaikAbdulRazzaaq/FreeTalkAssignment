@@ -1,4 +1,4 @@
-package com.projects.freetalk;
+package com.projects.freetalk.ui.adapters;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -7,6 +7,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.projects.freetalk.R;
+import com.projects.freetalk.data.bean.ImageSliderModel;
 import com.projects.freetalk.databinding.ItemPostBinding;
 
 import java.util.ArrayList;
@@ -33,8 +35,6 @@ public class PostItemAdapter extends RecyclerView.Adapter<PostItemAdapter.ViewHo
         ImageSlidingAdapter imageSlidingAdapter = new ImageSlidingAdapter(imageResList);
         holder.itemPostBinding.postSlider.setSliderAdapter(imageSlidingAdapter);
         holder.itemPostBinding.postSlider.setAutoCycle(false);
-
-
     }
 
     @Override

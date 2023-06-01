@@ -1,4 +1,4 @@
-package com.projects.freetalk;
+package com.projects.freetalk.data.bean;
 
 import androidx.annotation.DrawableRes;
 

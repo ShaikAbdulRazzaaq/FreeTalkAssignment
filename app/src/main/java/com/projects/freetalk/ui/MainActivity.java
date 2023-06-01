@@ -1,4 +1,4 @@
-package com.projects.freetalk;
+package com.projects.freetalk.ui;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,7 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.projects.freetalk.R;
 import com.projects.freetalk.databinding.ActivityMainBinding;
+import com.projects.freetalk.ui.adapters.PostItemAdapter;
 
 public class MainActivity extends AppCompatActivity {
 

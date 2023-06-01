@@ -1,8 +1,9 @@
-package com.projects.freetalk;
+package com.projects.freetalk.ui.adapters;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.projects.freetalk.data.bean.ImageSliderModel;
 import com.projects.freetalk.databinding.CustomImageSliderViewBinding;
 import com.smarteist.autoimageslider.SliderViewAdapter;
 import com.squareup.picasso.Picasso;
