@@ -230,7 +230,7 @@
 
         </com.google.android.material.chip.ChipGroup>
 
-        <com.opensooq.pluto.PlutoView
+        <com.smarteist.autoimageslider.SliderView
             android:id="@+id/postSlider"
             android:layout_width="0dp"
             android:layout_height="450dp"
@@ -239,7 +239,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tags_group" />
+            app:layout_constraintTop_toBottomOf="@id/tags_group"
+            app:sliderIndicatorSelectedColor="@color/white"
+            app:sliderStartAutoCycle="false" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_reactionMenu"
@@ -469,7 +471,8 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/btn_like"
-                app:layout_constraintTop_toBottomOf="@id/btn_comments" />
+                app:layout_constraintTop_toBottomOf="@id/btn_comments"
+                tools:listitem="@layout/comment_list_item" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -481,8 +484,8 @@
             app:layout_constraintTop_toBottomOf="@id/cl_captionOrComments">
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="12dp"
@@ -497,7 +500,7 @@
                 android:layout_weight="1"
                 android:background="@null"
                 android:fontFamily="@font/noto_sans"
-                android:hint="댓글을 남겨주세요."
+                android:hint="@string/text_comment_hint"
                 android:textColor="@color/cadet_blue"
                 android:textSize="12sp" />
 
@@ -506,11 +509,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="8dp"
                 android:minWidth="0dp"
-                android:text="등록"
+                android:text="@string/text_comment_send"
                 android:textColor="@color/bali_hai"
                 app:iconPadding="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
