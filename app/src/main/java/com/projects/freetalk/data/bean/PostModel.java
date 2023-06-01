@@ -20,13 +20,13 @@ public class PostModel {
     @StringRes
     int body;
     List<ImageSliderModel> imageSliderModels;
-    int likeCount;
-    int commentCount;
+    String likeCount;
+    String commentCount;
     @StringRes
     int profileCaption;
     List<CommentModel> commentModels;
 
-    public PostModel(int profileImage, int profileName, int profileWeight, int profileHeight, boolean isVerifiedProfile, int title, int body, List<ImageSliderModel> imageSliderModels, int likeCount, int commentCount, int profileCaption, List<CommentModel> commentModels) {
+    public PostModel(int profileImage, int profileName, int profileWeight, int profileHeight, boolean isVerifiedProfile, int title, int body, List<ImageSliderModel> imageSliderModels, String likeCount, String commentCount, int profileCaption, List<CommentModel> commentModels) {
         this.profileImage = profileImage;
         this.profileName = profileName;
         this.profileWeight = profileWeight;
@@ -105,19 +105,19 @@ public class PostModel {
         this.imageSliderModels = imageSliderModels;
     }
 
-    public int getLikeCount() {
+    public String getLikeCount() {
         return likeCount;
     }
 
-    public void setLikeCount(int likeCount) {
+    public void setLikeCount(String likeCount) {
         this.likeCount = likeCount;
     }
 
-    public int getCommentCount() {
+    public String getCommentCount() {
         return commentCount;
     }
 
-    public void setCommentCount(int commentCount) {
+    public void setCommentCount(String commentCount) {
         this.commentCount = commentCount;
     }
 

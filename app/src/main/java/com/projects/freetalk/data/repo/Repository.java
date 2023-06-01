@@ -16,6 +16,6 @@ public class Repository {
         list.add(new ImageSliderModel(R.drawable.image_loading));
         list.add(new ImageSliderModel(R.drawable.image_loading));
         commentModels.add(new CommentModel(R.drawable.other_profile, R.string.otherUserCaption, R.string.otherUserProfileName));
-        return new PostModel(R.drawable.profile_avatar, R.string.profile_name, R.string._53kg, R.string._165cm, true, R.string.post_title, R.string.tv_post_body, list, 5, 5, R.string.main_user_caption, commentModels);
+        return new PostModel(R.drawable.profile_avatar, R.string.profile_name, R.string._53kg, R.string._165cm, true, R.string.post_title, R.string.tv_post_body, list, "5", "5", R.string.main_user_caption, commentModels);
     }
 }
